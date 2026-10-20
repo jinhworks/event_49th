@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta property="og:title" content="🔍내가 지키는 것 간편 응모하고 커피 쿠폰 받아요!">
-  <meta property="og:description" content="11/9~11/29 내가 지키는 것 간편 응모하고 커피 쿠폰 받아요!">
-  <meta property="og:image" content="https://raw.githubusercontent.com/jinhworks/event_49th/main/event-og.png">
-  <meta property="og:url" content="https://jinhworks.github.io/event_49th/">
+  <meta property="og:description" content="49주년 기념 490명에게 커피 쿠폰이!">
+  <meta property="og:image" content="https://raw.githubusercontent.com/jinhworks/event_detective/main/event-og.png">
+  <meta property="og:url" content="https://jinhworks.github.io/event_detective/">
   <meta property="og:type" content="website">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>🔍내가 지키는 것 간편 응모하고 커피 쿠폰 받아요!</title>
@@ -23,25 +23,16 @@
 <body>
   잠시 후 이벤트 페이지로 이동합니다...
   <script>
-    // URL에서 utm_source 값 읽기
-    const params = new URLSearchParams(window.location.search);
-    const source = params.get('utm_source');
-    
-    // 파라미터 전체 가져오기 (UTM 유지용)
+    // 파라미터 전체 가져오기 (UTM 유지)
     const allParams = window.location.search;
     
-    let redirectUrl = 'https://naver.me/GdTcmqJr' + allParams; // 기본값 (utm 유지)
+    // 기본 네이버 폼으로 바로 이동
+    const redirectUrl = 'https://naver.me/GdTcmqJr' + allParams;
     
-    // preevent만 설문으로 (utm 유지)
-    if (source === 'preevent') {
-      redirectUrl = 'https://naver.me/5SK40sC9' + allParams;
-    }
-    
-    // GA가 충분히 기록할 수 있도록 2초 대기
+    // GA 기록 전송 후 이동 (2초)
     setTimeout(function() {
       window.location.href = redirectUrl;
     }, 2000);
   </script>
 </body>
 </html>
- 
